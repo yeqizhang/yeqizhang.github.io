@@ -1,0 +1,32 @@
+---
+layout: page
+title: About
+description: 爱笑的人运气不会差
+keywords: Ye Qizhang, 叶琦彰
+comments: true
+menu: 关于
+permalink: /about/
+---
+
+我是叶琦彰，
+
+java小白。
+
+编码为生。
+
+## 联系
+
+{% for website in site.data.social %}
+* {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
+{% endfor %}
+
+## Skill Keywords
+
+{% for category in site.data.skills %}
+### {{ category.name }}
+<div class="btn-inline">
+{% for keyword in category.keywords %}
+<button class="btn btn-outline" type="button">{{ keyword }}</button>
+{% endfor %}
+</div>
+{% endfor %}
