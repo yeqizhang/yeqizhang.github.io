@@ -1,0 +1,11 @@
+---
+layout: post
+title: 使用静态网站生成器的 Github Pages 博客网站
+categories: [随笔]
+description: 博客第一天
+keywords: 心情, 日记
+---
+
+fork 别人的博客模板导入到eclipse中修改提交的，然后发现hugo的在本地的更好调试，最后还有生成html页面，打算改天试一试，用另外一个仓库“hugo_blog”。
+
+学的越多，了解的越多，很多新生事物操作起来也比较顺手了，开心。准备要找工作了，关机睡觉~
