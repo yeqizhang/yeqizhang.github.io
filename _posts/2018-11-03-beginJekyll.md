@@ -32,9 +32,8 @@ markdown编辑器编辑好后将文件放入  _posts 文件夹即可。*
 Ruby环境变量的配置就不多说了（我的ruby放置的位置为 D:\ruby2.3.3 ），重点是DevKit的配置方法：
 
 我将DevKit放在D:\ruby_DevKit下，然后在这个目录下运行
-```
- ruby dk.rb init
-```
+
+`ruby dk.rb init`
 
 该目录中会自动生成一个config.yml文件,接下来，编辑这个文件，修改成以下样子
 
@@ -55,46 +54,43 @@ simply add a line below# the triple hyphens with the absolute path to the Ruby r
 ```
 
 修改完毕后，继续在本目录下键入以下命令即可
-```
-ruby dk.rb install
-```
+
+`ruby dk.rb install`
+
 2、更改默认的 source 源
 
-键入命令查看当前以及添加的源（默认可能同时有官方源和淘宝源，淘宝的源可能不正确）
-```
-gem sources -l
-```
+键入命令查看当前以及添加的源（默认可能同时有官方源和淘宝源，淘宝的源可能不正确
+
+`gem sources -l`
 
 根据结果移除掉所有源，例如移除官方源：
-```
-gem sources -r https://rubygems.org/
-```
+
+`gem sources -r https://rubygems.org/`
 
 添加淘宝源
-```
-gem sources -a http://gems.ruby-china.com 
-```
+
+`gem sources -a http://gems.ruby-china.com `
+
 淘宝的源目前是 com 而不是 org 。
 
 ## 安装 jekyll
 
-1、方式1，根据 Gemfile 文件， bundle
+1、根据 Gemfile 文件， 使用bundler安装
 
 在 yeqizhang.github.io 仓库根目录执行
-```
-bundle install
-```
+
+`bundle install`
+
 即可根据  Gemfile 中  " gem 'github-pages', group: :jekyll_plugins "安装  Jekyll。
 如果 bundle 没有安装，则需要通过以下命令先安装：
-```
-gem install bundler
-```
+
+`gem install bundler`
 
 第一次运行  bundle install 时自动生成  Gemfile.lock 文件。
 以后每次运行  bundle install 时,如果  Gemfile 中的条目不变 bundle 就不会再次计算 gem 依赖版本号，直接根据 Gemfile.lock 检查和安装 gem。
 如果出现依赖冲突时可以通过  bundle update 更新 Gemfile.lock。
 
-2、 直接运行 gem install jekyll  （未验证测试）
+2、 直接运行  gem install jekyll  （未验证测试）
 
 ## 遇到的问题
 
@@ -107,9 +103,8 @@ You have already activated public_suffix 3.0.2, but your Gemfile requires public
 Prepending bundle exec to your command may solve this. (Gem::LoadError)
 ```
 解决办法，改成执行
-```
-bundle exec jekyll serve
-```
+
+`bundle exec jekyll serve`
 
 2、 SSL 证书的问题
 ```
