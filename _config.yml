@@ -10,7 +10,7 @@ description: "叶琦彰的个人博客"
 keywords: 叶琦彰, Ye Qizhang, yeqizhang
 timezone: Asia/Shanghai
 encoding: "utf-8"
-side_bar_repo_limit: 3
+side_bar_repo_limit: 0
 
 # ---------------- #
 #      Author      #
