@@ -1,0 +1,4 @@
+![]({{ "/images/blog/2018-11-0-eclipse.png" | absolute_url }} "放在图片上的描述")
+
+图片下添加描述采用hmtl解决：
+<div align = "center">图1：eclipse编辑、管理仓库</div><br>

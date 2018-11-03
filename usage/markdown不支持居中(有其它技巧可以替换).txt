@@ -1,0 +1,9 @@
+markdown是文档结构描述语言，不支持任何格式。
+markdown不是不支持居中右对齐，而是不支持任何格式。所谓的加粗和斜体，只是两种强调语法，最终是显示为何种格式都是合理的。
+
+
+方式一，
+写入一行纯html代码。   
+<div align = center>eclipse编辑、管理仓库</div>
+
+但其不能再掺杂入markdown代码例如<div align = center>eclipse编辑、管理仓库</div>
