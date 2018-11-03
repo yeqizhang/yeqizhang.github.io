@@ -8,7 +8,7 @@ keywords: 部署, Jekyll
 
 ## 前言
 
-*本文记录了本人搭建 Jekyll 环境的过程，搭建好了环境后写博客调试好后就可以提交到 github 仓库里。只要需要会简单的 markdown 语法即可，写博客的过程简洁直观。也可以直接用
+*本文记录了搭建 Jekyll 环境的过程，搭建好了环境后可以边写博客边调试，好了后就可以提交到 github 仓库里。只要需要会简单的 markdown 语法即可，写博客的过程简洁直观。也可以直接用
 markdown编辑器编辑好后将文件放入  _posts 文件夹即可。*
 
 ![eclipse编辑、管理仓库]({{ "/images/blog/2018-11-03-eclipse.png" | absolute_url }})
@@ -20,7 +20,7 @@ markdown编辑器编辑好后将文件放入  _posts 文件夹即可。*
 
 1、安装 ruby + DevKit
 
-首先使用了我电脑上之前安装的 Java 写的  Ruby 版 —— Jruby来安装，出现的错误无法找到解决方案，遂还是使用原汁原味的Ruby。
+首先使用了电脑上之前安装的 Java 写的  Ruby 版 —— Jruby来安装，出现的错误无法找到解决方案，遂还是使用原汁原味的Ruby。
 
 因为个人比较喜欢绿色免安装的解压程序，所以一开始在 https://rubyinstaller.org/downloads/ 上下载的是 Ruby2.5.3-1 (x64) (7-ZIP ARCHIVES) , 
 后来发现没有 DevKit , 在仓库根目录下运行下列命令后
@@ -31,7 +31,7 @@ markdown编辑器编辑好后将文件放入  _posts 文件夹即可。*
  
 Ruby环境变量的配置就不多说了（我的ruby放置的位置为 D:\ruby2.3.3 ），重点是DevKit的配置方法：
 
-我将DevKit放在D:\ruby_DevKit下，然后在这个目录下运行
+将DevKit放在D:\ruby_DevKit下，然后在这个目录下运行
 
 `ruby dk.rb init`
 
@@ -120,7 +120,7 @@ Now make ruby aware of your certificate authority bundle by setting SSL_CERT_FIL
 
 set SSL_CERT_FILE=C:\RailsInstaller\cacert.pem
 ```
-我在根目录下建立了一个批处理命令：
+我在根目录下建立了一个批处理命令，可以方便地启动 github pages ：
 ```bat
 set SSL_CERT_FILE=D:\ruby2.3.3\cacert.pem
 bundle exec jekyll serve
@@ -149,7 +149,7 @@ def backwards_compatibilize
 
 ## 结语
 
-至此，我的 jekyll 已经可以本地部署好我的 Github Pages 了~ 写此篇博文时也学会了怎么插入图片以及说明！！后续考虑不再使用eclipse(启动IDE太麻烦，以及想要
+至此， jekyll 已经安装好了，可以本地部署好我的 Github Pages 了~ 写此篇博文时也学会了怎么插入图片以及说明！！后续考虑不再使用eclipse(启动IDE太麻烦，以及想要
 直接使用git来管理而不是在eclipse中)。
 
 ---
