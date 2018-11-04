@@ -8,7 +8,7 @@ keywords: 博客, Jekyll, 语法
 
 # 前言
 
-*本博客其实就固定几个页面，各个页面可以独立存在。我们访问 Github Pages 网站时的入口为 index。html ，然后通过菜单跳转到各个页面。
+*本博客其实就固定几个页面，各个页面可以独立存在。我们访问 Github Pages 网站时的入口为 index.html ，然后通过菜单跳转到各个页面。
 但各个页面也有相同的部分，那就是最上面（ header ）“ title + 菜单 ”的那一行、搜索框，以及底部（ footer ）的一部分；*
 
 # 一、基础语法
@@ -253,7 +253,7 @@ default.html 将在被引入的页面前后分别加 header.html footer.html
 
 	页面有复用。
 
-### 1、index。html （菜单“首页”）
+### 1、index.html （菜单“首页”）
 	通过 markdown 语法 layout: default 引入 _layouts 文件夹下的 default.html页面, 包含了header.html  footer.html 。
 	
 	 本身代码部分（content部分）
@@ -287,7 +287,7 @@ default.html 将在被引入的页面前后分别加 header.html footer.html
 	
 	后面部分为 wiki.html的代码，对应分页、分享栏、评论栏 以及右侧的搜索框。
 	
-### 4、菜单“链接”  对应 links.md编译的页面。   （没有links。html）
+### 4、菜单“链接”  对应 links.md编译的页面。   （没有links.html）
 	和“维基”一样，
  	links.md通过 markdown 语法 layout: page 引入 _layouts 文件夹下的 page.html页面,page.html又通
 	过 markdown 语法 layout: default 引入 _layouts 文件夹下的 default.html页面, 包含了header.html  footer.html 。
@@ -298,7 +298,7 @@ default.html 将在被引入的页面前后分别加 header.html footer.html
 	
 	后面部分为 wiki.html的代码，对应分页、分享栏、评论栏 以及右侧的搜索框。
 
-### 5、菜单“关于”  对应 about.md编译的页面。   （没有about。html）
+### 5、菜单“关于”  对应 about.md编译的页面。   （没有about.html）
 	和“链接”一样，
  	links.md通过 markdown 语法 layout: page 引入 _layouts 文件夹下的 page.html页面,page.html又通
 	过 markdown 语法 layout: default 引入 _layouts 文件夹下的 default.html页面, 包含了header.html  footer.html 。
