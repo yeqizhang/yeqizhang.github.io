@@ -327,3 +327,6 @@ default.html 将在被引入的页面前后分别加 header.html footer.html
 	 
 	 和index.html本身的代码类似，只是少了翻页，换做了分享组件以及评论组件。
 	 
+# 参考链接
+
+[Jekyll 语法简单笔记](http://ju.outofmemory.cn/entry/98471)
