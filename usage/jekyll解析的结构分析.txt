@@ -2,7 +2,10 @@
 各个页面独立。我们访问网站时的入口为index。html，通过菜单跳转到各个页面。
 但各个页面也有相同的部分，那就是最上面（header）“title + 菜单”的那一行，以及底部（footer）的一部分。
 
-就是把_layouts 文件夹下的 default.html页面（site header区域）引入，可通过jekyll语法。
+就是把_layouts 文件夹下的 default.html页面（site header区域）引入，可通过jekyll语法：
+---
+layout: default
+---
 
 看default。html代码：
 
@@ -64,8 +67,8 @@ default.html 将在被引入的页面前后分别加 header.html footer.html
 		description: 记录搭建Jekyll环境时遇到的问题和解决办法
 		keywords: 部署, Jekyll
 		---
-	 markdown 语法 layout: post 引入 _layouts 文件夹下的 post.html页面,  post.html页面又引入了 _layouts 文件夹
-	 下的 default.html页面，包含了header.html  footer.html .
+	 markdown 语法 layout: post 引入 _layouts 文件夹下的 post.html模板页面,  post.html页面又引入了 _layouts 文件夹
+	 下的 default.html页面，在前后追加了header.html  footer.html .
 	 post.html本身的代码（即default的content部分）
 	 和index.html本身的代码类似，只是少了翻页，换做了分享组件以及评论组件。
 	 

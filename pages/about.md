@@ -10,7 +10,7 @@ permalink: /about/
 
 我是叶琦彰，
 
-java小白。
+java码农，
 
 编码为生。
 
