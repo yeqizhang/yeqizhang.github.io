@@ -8,7 +8,7 @@ keywords: 博客, Jekyll, 语法
 
 # 前言
 
-*本博客其实就固定几个页面，各个页面可以独立存在。我们访问 Github Pages 网站时的入口为 index.html ，然后通过菜单跳转到各个页面。
+*本博客其实就固定几个页面，各个页面可以独立存在。我们访问 Github Pages 网站时的入口为  index.html ，然后通过菜单跳转到各个页面。
 但各个页面也有相同的部分，那就是最上面（ header ）“ title + 菜单 ”的那一行、搜索框，以及底部（ footer ）的一部分；*
 
 # 一、基础语法
@@ -229,15 +229,15 @@ remove 可以删除变量中的指定内容
 
 # 二、本博客文件结构
 
-## 如何把_layouts 文件夹下的 default.html页面（site header区域）引入？
+## 如何把 _layouts 文件夹下的 default.html 页面（ site header 区域）引入？
 
-可通过jekyll语法：
+可通过 jekyll 语法：
 ```
 ---
 layout: default
 ---
 ```
-default.html代码：
+default.html 代码：
 
 \{`%` include header.html `%`\}
 
@@ -249,14 +249,14 @@ default.html代码：
 
 default.html 将在被引入的页面前后分别加 header.html footer.html 
 
-## 下面开始分析jekyll是怎么组合起各页面
+## 下面开始分析 jekyll 是怎么组合起各页面
 
 	页面有复用。
 
 ### 1、index.html （菜单“首页”）
-	通过 markdown 语法 layout: default 引入 _layouts 文件夹下的 default.html页面, 包含了header.html  footer.html 。
+	通过 markdown 语法 layout: default 引入 _layouts 文件夹下的 default.html 页面, 包含了 header.html  footer.html 。
 	
-	 本身代码部分（content部分）
+	 本身代码部分（ content 部分）
 	 
 	 2.1 banner （第1个区域）
 	 
@@ -266,66 +266,66 @@ default.html 将在被引入的页面前后分别加 header.html footer.html
 	 		
 	 			翻页组件 （第2个区域的下面部分）
 
-### 2、菜单“分类”  对应categories.md编译的页面。
-	categories.md通过 markdown 语法 layout: categories 引入 _layouts 文件夹下的 categories.html页面,categories.html又通
-	过 markdown 语法 layout: default 引入 _layouts 文件夹下的 default.html页面, 包含了header.html  footer.html 。
+### 2、菜单“分类”  对应 categories.md 编译的页面。
+	categories.md 通过 markdown 语法 layout: categories 引入 _layouts 文件夹下的 categories.html 页面, categories.html 又通
+	过 markdown 语法 layout: default 引入 _layouts 文件夹下的  default.html 页面, 包含了 header.html  footer.html 。
 	
-	本身代码部分（content部分），注意两个文件的代码。
+	本身代码部分（ content 部分），注意两个文件的代码。
 	
-	前面部分为categories.md的代码，对应分类+博客文章标题列表
+	前面部分为 categories.md 的代码，对应分类+博客文章标题列表
 	
-	后面部分为 categories.html的代码，对应分页、分享栏、评论栏 、以及右侧的搜索框、 Blog Categories
+	后面部分为 categories.html 的代码，对应分页、分享栏、评论栏 、以及右侧的搜索框、 Blog Categories
 	
-### 3、菜单“维基”  对应 wiki.md编译的页面。
+### 3、菜单“维基”  对应  wiki.md 编译的页面。
  	和“分类”一样，
- 	wiki.md通过 markdown 语法 layout: wiki 引入 _layouts 文件夹下的 wiki.html页面,wiki.html又通
-	过 markdown 语法 layout: default 引入 _layouts 文件夹下的 default.html页面, 包含了header.html  footer.html 。
+ 	wiki.md 通过 markdown 语法 layout: wiki 引入 _layouts 文件夹下的 wiki.html 页面, wiki.html 又通
+	过 markdown 语法 layout: default 引入 _layouts 文件夹下的 default.html 页面, 包含了 header.html  footer.html 。
 	
-	本身代码部分（content部分），注意两个文件的代码。
+	本身代码部分（ content 部分），注意两个文件的代码。
 	
-	前面部分为wiki.md的代码，对应分类+博客文章标题列表
+	前面部分为wiki.md 的代码，对应分类+博客文章标题列表
 	
-	后面部分为 wiki.html的代码，对应分页、分享栏、评论栏 以及右侧的搜索框。
+	后面部分为 wiki.html 的代码，对应分页、分享栏、评论栏 以及右侧的搜索框。
 	
-### 4、菜单“链接”  对应 links.md编译的页面。   （没有links.html）
+### 4、菜单“链接”  对应  links.md 编译的页面。   （没有 links.html ）
 	和“维基”一样，
- 	links.md通过 markdown 语法 layout: page 引入 _layouts 文件夹下的 page.html页面,page.html又通
-	过 markdown 语法 layout: default 引入 _layouts 文件夹下的 default.html页面, 包含了header.html  footer.html 。
+ 	links.md 通过 markdown 语法 layout: page 引入 _layouts 文件夹下的 page.html 页面, page.html 又通
+	过 markdown 语法 layout: default 引入 _layouts 文件夹下的 default.html 页面, 包含了header.html  footer.html 。
 	
-	本身代码部分（content部分），注意两个文件的代码。
+	本身代码部分（ content 部分），注意两个文件的代码。
 	
-	前面部分为wiki.md的代码，对应  分类+博客  文章标题列表
+	前面部分为 wiki.md 的代码，对应  分类+博客  文章标题列表
 	
-	后面部分为 wiki.html的代码，对应分页、分享栏、评论栏 以及右侧的搜索框。
+	后面部分为  wiki.html 的代码，对应分页、分享栏、评论栏 以及右侧的搜索框。
 
-### 5、菜单“关于”  对应 about.md编译的页面。   （没有about.html）
+### 5、菜单“关于”  对应  about.md 编译的页面。   （没有 about.html ）
 	和“链接”一样，
- 	links.md通过 markdown 语法 layout: page 引入 _layouts 文件夹下的 page.html页面,page.html又通
-	过 markdown 语法 layout: default 引入 _layouts 文件夹下的 default.html页面, 包含了header.html  footer.html 。
+ 	links.md 通过  markdown 语法 layout: page 引入 _layouts 文件夹下的 page.html 页面, page.html 又通
+	过 markdown 语法 layout: default 引入 _layouts 文件夹下的 default.html 页面, 包含了header.html  footer.html 。
 	
 	本身代码部分（content部分），注意两个文件的代码。
 	
-	前面部分为wiki.md的代码，对应分类+博客文章标题列表
+	前面部分为 wiki.md 的代码，对应分类+博客文章标题列表
 	
-	后面部分为 wiki.html的代码，对应分页、分享栏、评论栏 以及右侧的搜索框。
+	后面部分为 wiki.html 的代码，对应分页、分享栏、评论栏 以及右侧的搜索框。
 
 ### 6、点击博文打开的页面
-	对_posts文件中符合/:year/:month/:day/:title/要求的.md文件进行编译成html，每个post的html中开始都包含了一下jekyll代码：
+	对 _posts 文件中符合/:year/:month/:day/:title/要求的 .md 文件进行编译成 html ，每个 post 的 html 中开始都包含了一下 jekyll 代码：
 	```
 		---
 		layout: post
-		title: 本地部署Jekyll并使用之写此文时查看效果
+		title: 本地部署 Jekyll 并使用之写此文时查看效果
 		categories: [环境搭建]
-		description: 记录搭建Jekyll环境时遇到的问题和解决办法
+		description: 记录搭建 Jekyll 环境时遇到的问题和解决办法
 		keywords: 部署, Jekyll
 		---
 	```	
-	 markdown 语法 layout: post 引入 _layouts 文件夹下的 post.html模板页面,  post.html页面又引入了 _layouts 文件夹
+	 markdown 语法  layout : post 引入 _layouts 文件夹下的  post.html 模板页面,  post.html 页面又引入了  _layouts 文件夹
 	 下的 default.html页面，在前后追加了header.html  footer.html .
 	 
-	 post.html本身的代码（即default的content部分）
+	 post.html 本身的代码（即 default 的 content 部分）
 	 
-	 和index.html本身的代码类似，只是少了翻页，换做了分享组件以及评论组件。
+	 和index.html 本身的代码类似，只是少了翻页，换做了分享组件以及评论组件。
 	 
 # 参考链接
 
