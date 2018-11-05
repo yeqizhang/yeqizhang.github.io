@@ -17,9 +17,9 @@ side_bar_repo_limit: 0
 #      Author      #
 # ---------------- #
 author: Ye Qizhang
-# index.html注释掉organization的展示
-# organization: zkh360.com
-# organization_url: http://www.zkh360.com
+# index.html注释掉organization的展示（后来又加上）
+organization: safeguard-world-peace
+organization_url: https://github.com/safeguard-world-peace
 github_username: yeqizhang
 location: Guangzhou, China
 email: yqz19920528@gmail.com
