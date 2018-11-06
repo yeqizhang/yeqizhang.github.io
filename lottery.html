@@ -60,6 +60,25 @@
 				background-color: #ea6f5a;
 				border-radius: 20px;
 			}
+			.luckclear {
+				margin-left:18px;
+				display: inline-block;
+				font-weight: 400;
+				text-align: center;
+				vertical-align: middle;
+				touch-action: manipulation;
+				cursor: pointer;
+				background-image: none;
+				border: 1px solid transparent;
+				white-space: nowrap;
+				line-height: 1.42857;
+				margin-bottom: 20px;
+				padding: 8px 25px;
+				font-size: 16px;
+				color: #fff;
+				background-color: #06C;
+				border-radius: 20px;
+			}
 		</style>
 
 	</head>
@@ -129,6 +148,17 @@
 			document.getElementById('tone6').innerHTML = blue;
 			document.getElementById('luck').innerHTML = "good luck!";
 		}
+		
+		function luckclear(){
+			document.getElementById('removeRed').value = "";
+			document.getElementById('removeBlue').value = "";
+			document.getElementById('selectBlue').value = "";
+			//清除 筛选的号码
+			for (var h = 0; h < 7; h++) {
+				document.getElementById('tone' + h + '').innerHTML = "";
+			}
+			document.getElementById('luck').innerHTML = "";
+		}
 
 	</script>
 	<body>
@@ -148,6 +178,9 @@
 		<!--<button type="button" id="cilckMe" onclick="getway()">lucky button</button>-->
 		<div class="luckbutton" onclick="getway()">
 			lucky button
+		</div>
+		<div class="luckclear" onclick="luckclear()">
+			clear all
 		</div>
 		</br></br>
 		<div id="tone0" class="redball"></div>
