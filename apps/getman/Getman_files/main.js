@@ -381,9 +381,9 @@ $("#btn_send_type").click(function () {
 
 $("#btn_send").click(function () {
     url = $("#txt_url").val();
-    if(url.length == 0){
+    /*if(url.length == 0){
         url = 'https://getman.cn/echo';
-    }
+    }*/
     setHistory(url);
     body = $("#txt_request_body").val();
     header = kv_to_array($("#txt_request_header").val());
@@ -552,5 +552,5 @@ $("#btn_response_setcookie").click(function () {
 });
 
 //---------------------------------------------
-console.log('https://getman.cn');
-contact = 'enp4MDk0QGdtYWlsLmNvbQ==';
+//console.log('https://getman.cn');
+//contact = 'enp4MDk0QGdtYWlsLmNvbQ==';
