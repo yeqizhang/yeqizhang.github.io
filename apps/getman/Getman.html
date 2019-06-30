@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://getman.cn/jlrnl -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Getman</title>
+    <meta name="keywords" content="Getman,Postman,HTTP,Request,Curl,API,GET,POST,PUT,PATCH,DELETE,RESTful,JSON,XML,接口,在线,网页,测试,User-Agent,Cookie,Header,Android,iOS,OAuth">
+    <meta name="description" content="API接口请求模拟测试工具,支持跨域本地接口,Postman网页版,在线Curl,自定义Header JSON接口调试 User-Agent Cookie,HTTP Request,GET POST PUT PATCH DELETE RESTful XML Android iOS OAuth">
+    <meta name="csrf-token" content="x8ypt3OEcU9hm5monMSmNNtBLUayD5rDTsvbBBPh">
+    <link rel="stylesheet" href="./Getman_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Getman_files/style.css">
+    
+    <style>
+            </style>
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-7352723447940003",
+            enable_page_level_ads: true
+        });
+    </script> -->
+       <!-- <link rel="manifest" href="https://getman.cn/js/manifest.json"> -->
+<link rel="stylesheet" type="text/css" href="./Getman_files/prettify.css"></head>
+
+<body>
+
+<div id="like_modal" class="modal fade in" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+    <div class="container">
+        <div id="alert"></div>
+        <div class="input-group input-group-lg">
+            <div class="input-group-btn">
+                <button type="button" id="btn_send_type" class="btn btn-default" title="Remote"><span id="ico_send_type" class="glyphicon glyphicon-cloud"></span>
+                </button>
+                <button id="btn_method" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span id="txt_method">GET</span> <span class="caret"></span></button>
+                <ul id="method_menu" class="dropdown-menu" role="menu">
+                    <li><a href="javascript:void(0)" class="method">GET</a></li>
+                    <li><a href="javascript:void(0)" class="method">POST</a></li>
+                    <li><a href="javascript:void(0)" class="method">PUT</a></li>
+                    <li><a href="javascript:void(0)" class="method">PATCH</a></li>
+                    <li><a href="javascript:void(0)" class="method">DELETE</a></li>
+                </ul>
+            </div>
+            <!-- /btn-group -->
+            <input id="txt_url" type="text" class="form-control" placeholder="" value="">
+            <span class="input-group-btn">
+                <button id="btn_send" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-arrow-right"></span></button>
+            </span>
+        </div>
+        <!-- /input-group -->
+        <h3>Request</h3>
+        <div id="request">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active" id="btn_request_body"><a href="javascript:void(0)">Body</a></li>
+                <li role="presentation" id="btn_request_header" class=""><a href="javascript:void(0)">Header</a></li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" aria-expanded="false"><span id="txt_content_type">Content-Type</span> <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="javascript:void(0)" class="content_type">application/xml</a></li>
+                        <li><a href="javascript:void(0)" class="content_type">application/json</a></li>
+                        <li><a href="javascript:void(0)" class="content_type">multipart/form-data</a></li>
+                        <li><a href="javascript:void(0)" class="content_type">application/x-www-form-urlencoded</a></li>
+                    </ul>
+                </li>
+                <li role="presentation" class="pull-right" style="display: none">
+                    <a id="btn_share" href="javascript:void(0)" title="Share"><span class="glyphicon glyphicon-share-alt"></span></a>
+                </li>
+            </ul>
+            <textarea id="txt_request_body" class="form-control request_text" placeholder="key1: value1 
+key2: value2 
+" style="display: block;"></textarea>
+            <textarea id="txt_request_header" class="form-control request_text" placeholder="User-Agent: Mozilla/5.0 
+Cookie: key=value;" style="display: none;"></textarea>
+        </div>
+        <h3>Response</h3>
+        <div id="response">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active" id="btn_response_body" preview="false"><a href="javascript:void(0)">Body</a></li>
+                <li role="presentation" id="btn_response_header" class=""><a href="javascript:void(0)">Header</a></li>
+                <li role="presentation" id="btn_response_setcookie" style="display: list-item;"><a href="javascript:void(0)">Set-Cookie</a></li>
+                <li role="presentation" class="pull-right">
+                    <a id="txt_status" href="javascript:void(0)" class="text-primary" title="服务器已成功处理了请求">200 OK</a>
+                </li>
+            </ul>
+            <pre id="txt_response_body" class="prettyprint response_text prettyprinted" style="display: block;"><span class="pln">GET </span><span class="pun">/</span><span class="pln">echo HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln">
+X</span><span class="pun">-</span><span class="pln">FORWARDED</span><span class="pun">-</span><span class="pln">FOR</span><span class="pun">:</span><span class="pln"> </span><span class="lit">211.97</span><span class="pun">.</span><span class="lit">30.207</span><span class="pln">
+REFERER</span><span class="pun">:</span><span class="pln"> http</span><span class="pun">:</span><span class="com">//getman.cn</span><span class="pln">
+USER</span><span class="pun">-</span><span class="pln">AGENT</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Getman</span><span class="pun">.</span><span class="pln">cn
+HOST</span><span class="pun">:</span><span class="pln"> getman</span><span class="pun">.</span><span class="pln">cn
+</span></pre>
+            <pre id="txt_response_header" class="prettyprint response_text prettyprinted" style="display: none;"><span class="typ">Server</span><span class="pun">:</span><span class="pln"> nginx
+</span><span class="typ">Content</span><span class="pun">-</span><span class="typ">Type</span><span class="pun">:</span><span class="pln"> text</span><span class="pun">/</span><span class="pln">html</span><span class="pun">;</span><span class="pln"> charset</span><span class="pun">=</span><span class="pln">UTF</span><span class="pun">-</span><span class="lit">8</span><span class="pln">
+</span><span class="typ">Transfer</span><span class="pun">-</span><span class="typ">Encoding</span><span class="pun">:</span><span class="pln"> chunked
+</span><span class="typ">Connection</span><span class="pun">:</span><span class="pln"> keep</span><span class="pun">-</span><span class="pln">alive
+</span><span class="typ">Vary</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Accept</span><span class="pun">-</span><span class="typ">Encoding</span><span class="pln">
+X</span><span class="pun">-</span><span class="typ">Powered</span><span class="pun">-</span><span class="typ">By</span><span class="pun">:</span><span class="pln"> PHP</span><span class="pun">/</span><span class="lit">7.2</span><span class="pun">.</span><span class="lit">6</span><span class="pln">
+</span><span class="typ">Access</span><span class="pun">-</span><span class="typ">Control</span><span class="pun">-</span><span class="typ">Allow</span><span class="pun">-</span><span class="typ">Origin</span><span class="pun">:</span><span class="pln"> </span><span class="pun">*</span><span class="pln">
+</span><span class="typ">Cache</span><span class="pun">-</span><span class="typ">Control</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">no</span><span class="pun">-</span><span class="pln">cache</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">private</span><span class="pln">
+</span><span class="typ">Date</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Sun</span><span class="pun">,</span><span class="pln"> </span><span class="lit">30</span><span class="pln"> </span><span class="typ">Jun</span><span class="pln"> </span><span class="lit">2019</span><span class="pln"> </span><span class="lit">07</span><span class="pun">:</span><span class="lit">03</span><span class="pun">:</span><span class="lit">57</span><span class="pln"> GMT
+</span><span class="typ">Set</span><span class="pun">-</span><span class="typ">Cookie</span><span class="pun">:</span><span class="pln"> XSRF</span><span class="pun">-</span><span class="pln">TOKEN</span><span class="pun">=</span><span class="pln">eyJpdiI6IkVWTXNpV0Jmb2xzXC9QdjVha1Y1R1pnPT0iLCJ2YWx1ZSI6Imh6VGJsWHFVMkNONjhxZXFXTk9qQVBlWktjZFFcL080Kys5dnZNaWVkeDRtVU91T2VXXC8xc1htMlR1dWFSY0hIVVBWRkN6Nko0dlUwMWM3cWRIZ1ZDSEE9PSIsIm1hYyI6IjkwYjI3MTcxMTRjNmQ5ODg3ZTA3YjgzZDQ4OTY3ODRhODQ2MmY1N2IzNjYxNDlkNzQyNzQwZWIzN2YzMjEwOTMifQ</span><span class="pun">%</span><span class="lit">3D</span><span class="pun">%</span><span class="lit">3D</span><span class="pun">;</span><span class="pln"> expires</span><span class="pun">=</span><span class="typ">Sun</span><span class="pun">,</span><span class="pln"> </span><span class="lit">30</span><span class="pun">-</span><span class="typ">Jun</span><span class="pun">-</span><span class="lit">2019</span><span class="pln"> </span><span class="lit">09</span><span class="pun">:</span><span class="lit">03</span><span class="pun">:</span><span class="lit">57</span><span class="pln"> GMT</span><span class="pun">;</span><span class="pln"> </span><span class="typ">Max</span><span class="pun">-</span><span class="typ">Age</span><span class="pun">=</span><span class="lit">7200</span><span class="pun">;</span><span class="pln"> path</span><span class="pun">=</span><span class="str">/,laravel_session=eyJpdiI6Im5cLzBRNk1VZjE1eEt3VmJsclgwR1pRPT0iLCJ2YWx1ZSI6IitQZDcyaHBnOGNvdmJYK1VcL3NLUDF5VHFGUFN2Q2VTd3ljU0tzOE9YMTBXUnpaK1NTN3JPSnFlaTRmUFNGbWwyTGZ2REMrRGVud2g5YUNBdGdjdFhGZz09IiwibWFjIjoiODE5YzNmZWM3MDMxYzM3ZGEyYTdhN2UxZjJmMmMwODUyOTMzYjFjNDU3YmE4ZjllZjQ5NWUxMmUzNWMzMDFjYSJ9; expires=Sun, 30-Jun-2019 09:03:57 GMT; Max-Age=7200; path=/</span><span class="pun">;</span><span class="pln"> httponly</span></pre>
+        </div>
+    </div>
+
+<script src="https://hm.baidu.com/hm.js?5355caba3fc9511e407d548c7c066f64"></script><script src="./Getman_files/jquery.min.js"></script>
+<script src="./Getman_files/bootstrap.min.js"></script>
+<script src="./Getman_files/common.js"></script>
+
+    
+    <script src="./Getman_files/main.js"></script>
+    <!--[if gte IE 8]>
+    <script src="http://cdn.bootcss.com/json2/20160511/json2.min.js"></script>
+    <script src="https://getman.cn/js/fix.js?v=6"></script>
+    <![endif]-->
+    <script>
+  // 检测浏览器是否支持SW
+  if(navigator.serviceWorker != null){
+    // navigator.serviceWorker.register('/js/sw.js')
+    // .then(function(registartion){
+    //   console.log('sw:',registartion.scope)
+    // })
+  }
+</script>
+
+
+
+
+</body></html>

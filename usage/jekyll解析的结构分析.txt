@@ -47,8 +47,8 @@ default.html 将在被引入的页面前后分别加 header.html footer.html
  	links.md通过 markdown 语法 layout: page 引入 _layouts 文件夹下的 page.html页面,page.html又通
 	过 markdown 语法 layout: default 引入 _layouts 文件夹下的 default.html页面, 包含了header.html  footer.html 。
 	本身代码部分（content部分），注意两个文件的代码。
-	前面部分为wiki.md的代码，对应  分类+博客  文章标题列表
-	后面部分为 wiki.html的代码，对应分页、分享栏、评论栏 以及右侧的搜索框。
+	前面部分为links.md的代码，对应  分类+博客  文章标题列表
+	后面部分为 links.html的代码，对应分页、分享栏、评论栏 以及右侧的搜索框。
 
 5、菜单“关于”  对应 about.md编译的页面。   （没有about。html）
 	和“链接”一样，
@@ -72,6 +72,9 @@ default.html 将在被引入的页面前后分别加 header.html footer.html
 	 post.html本身的代码（即default的content部分）
 	 和index.html本身的代码类似，只是少了翻页，换做了分享组件以及评论组件。
 	 
+====================================================================
+jekyll ， 运行runPagesByJekyll.bat可以生成静态站点_site文件夹，  不用提交到github仓库里。  .gitignore里忽略了它。
+
 
   
 

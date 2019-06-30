@@ -2,6 +2,9 @@
 
 博客模板fork来自mzlogin，其个人博客：<https://mazhuang.org>。
 
+apps下的在线curl工具——getman，代码搬运自 https://getman.cn/ 。这里只是搬运给自己使用。
+
+
 ## 概览
 
 <!-- vim-markdown-toc GFM -->
