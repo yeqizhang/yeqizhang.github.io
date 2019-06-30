@@ -88,29 +88,15 @@ Cookie: key=value;" style="display: none;"></textarea>
         <h3>Response</h3>
         <div id="response">
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active" id="btn_response_body" preview="false"><a href="javascript:void(0)">Body</a></li>
-                <li role="presentation" id="btn_response_header" class=""><a href="javascript:void(0)">Header</a></li>
-                <li role="presentation" id="btn_response_setcookie" style="display: list-item;"><a href="javascript:void(0)">Set-Cookie</a></li>
+                <li role="presentation" class="active" id="btn_response_body"><a href="javascript:void(0)">Body</a></li>
+                <li role="presentation" id="btn_response_header"><a href="javascript:void(0)">Header</a></li>
+                <li role="presentation" id="btn_response_setcookie"><a href="javascript:void(0)">Set-Cookie</a></li>
                 <li role="presentation" class="pull-right">
-                    <a id="txt_status" href="javascript:void(0)" class="text-primary" title="服务器已成功处理了请求">200 OK</a>
+                    <a id="txt_status" href="javascript:void(0)" class="text-primary" title="Status"></a>
                 </li>
             </ul>
-            <pre id="txt_response_body" class="prettyprint response_text prettyprinted" style="display: block;"><span class="pln">GET </span><span class="pun">/</span><span class="pln">echo HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln">
-X</span><span class="pun">-</span><span class="pln">FORWARDED</span><span class="pun">-</span><span class="pln">FOR</span><span class="pun">:</span><span class="pln"> </span><span class="lit">211.97</span><span class="pun">.</span><span class="lit">30.207</span><span class="pln">
-REFERER</span><span class="pun">:</span><span class="pln"> http</span><span class="pun">:</span><span class="com">//getman.cn</span><span class="pln">
-USER</span><span class="pun">-</span><span class="pln">AGENT</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Getman</span><span class="pun">.</span><span class="pln">cn
-HOST</span><span class="pun">:</span><span class="pln"> getman</span><span class="pun">.</span><span class="pln">cn
-</span></pre>
-            <pre id="txt_response_header" class="prettyprint response_text prettyprinted" style="display: none;"><span class="typ">Server</span><span class="pun">:</span><span class="pln"> nginx
-</span><span class="typ">Content</span><span class="pun">-</span><span class="typ">Type</span><span class="pun">:</span><span class="pln"> text</span><span class="pun">/</span><span class="pln">html</span><span class="pun">;</span><span class="pln"> charset</span><span class="pun">=</span><span class="pln">UTF</span><span class="pun">-</span><span class="lit">8</span><span class="pln">
-</span><span class="typ">Transfer</span><span class="pun">-</span><span class="typ">Encoding</span><span class="pun">:</span><span class="pln"> chunked
-</span><span class="typ">Connection</span><span class="pun">:</span><span class="pln"> keep</span><span class="pun">-</span><span class="pln">alive
-</span><span class="typ">Vary</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Accept</span><span class="pun">-</span><span class="typ">Encoding</span><span class="pln">
-X</span><span class="pun">-</span><span class="typ">Powered</span><span class="pun">-</span><span class="typ">By</span><span class="pun">:</span><span class="pln"> PHP</span><span class="pun">/</span><span class="lit">7.2</span><span class="pun">.</span><span class="lit">6</span><span class="pln">
-</span><span class="typ">Access</span><span class="pun">-</span><span class="typ">Control</span><span class="pun">-</span><span class="typ">Allow</span><span class="pun">-</span><span class="typ">Origin</span><span class="pun">:</span><span class="pln"> </span><span class="pun">*</span><span class="pln">
-</span><span class="typ">Cache</span><span class="pun">-</span><span class="typ">Control</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">no</span><span class="pun">-</span><span class="pln">cache</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">private</span><span class="pln">
-</span><span class="typ">Date</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Sun</span><span class="pun">,</span><span class="pln"> </span><span class="lit">30</span><span class="pln"> </span><span class="typ">Jun</span><span class="pln"> </span><span class="lit">2019</span><span class="pln"> </span><span class="lit">07</span><span class="pun">:</span><span class="lit">03</span><span class="pun">:</span><span class="lit">57</span><span class="pln"> GMT
-</span><span class="typ">Set</span><span class="pun">-</span><span class="typ">Cookie</span><span class="pun">:</span><span class="pln"> XSRF</span><span class="pun">-</span><span class="pln">TOKEN</span><span class="pun">=</span><span class="pln">eyJpdiI6IkVWTXNpV0Jmb2xzXC9QdjVha1Y1R1pnPT0iLCJ2YWx1ZSI6Imh6VGJsWHFVMkNONjhxZXFXTk9qQVBlWktjZFFcL080Kys5dnZNaWVkeDRtVU91T2VXXC8xc1htMlR1dWFSY0hIVVBWRkN6Nko0dlUwMWM3cWRIZ1ZDSEE9PSIsIm1hYyI6IjkwYjI3MTcxMTRjNmQ5ODg3ZTA3YjgzZDQ4OTY3ODRhODQ2MmY1N2IzNjYxNDlkNzQyNzQwZWIzN2YzMjEwOTMifQ</span><span class="pun">%</span><span class="lit">3D</span><span class="pun">%</span><span class="lit">3D</span><span class="pun">;</span><span class="pln"> expires</span><span class="pun">=</span><span class="typ">Sun</span><span class="pun">,</span><span class="pln"> </span><span class="lit">30</span><span class="pun">-</span><span class="typ">Jun</span><span class="pun">-</span><span class="lit">2019</span><span class="pln"> </span><span class="lit">09</span><span class="pun">:</span><span class="lit">03</span><span class="pun">:</span><span class="lit">57</span><span class="pln"> GMT</span><span class="pun">;</span><span class="pln"> </span><span class="typ">Max</span><span class="pun">-</span><span class="typ">Age</span><span class="pun">=</span><span class="lit">7200</span><span class="pun">;</span><span class="pln"> path</span><span class="pun">=</span><span class="str">/,laravel_session=eyJpdiI6Im5cLzBRNk1VZjE1eEt3VmJsclgwR1pRPT0iLCJ2YWx1ZSI6IitQZDcyaHBnOGNvdmJYK1VcL3NLUDF5VHFGUFN2Q2VTd3ljU0tzOE9YMTBXUnpaK1NTN3JPSnFlaTRmUFNGbWwyTGZ2REMrRGVud2g5YUNBdGdjdFhGZz09IiwibWFjIjoiODE5YzNmZWM3MDMxYzM3ZGEyYTdhN2UxZjJmMmMwODUyOTMzYjFjNDU3YmE4ZjllZjQ5NWUxMmUzNWMzMDFjYSJ9; expires=Sun, 30-Jun-2019 09:03:57 GMT; Max-Age=7200; path=/</span><span class="pun">;</span><span class="pln"> httponly</span></pre>
+            <pre id="txt_response_body" class="prettyprint response_text"></pre>
+            <pre id="txt_response_header" class="prettyprint response_text"></pre>
         </div>
     </div>
 
