@@ -1,7 +1,9 @@
 - name: 叶琦彰
   url: https://yeqizhang.github.io
 - name: 我的lottery
-  url: https://yeqizhang.github.io/lottery  
+  url: https://yeqizhang.github.io/single_page/lottery  
+- name: 经济机器是如何运行的
+  url: https://yeqizhang.github.io/single_page/economy   
 #- name: 我的在线curl
 #  url: https://yeqizhang.github.io/apps/getman/Getman.html  
 - name: 码志
